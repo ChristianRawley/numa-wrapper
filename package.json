@@ -1,0 +1,25 @@
+{
+  "name": "numa-wrapper",
+  "version": "1.0.0",
+  "description": "A simple API wrapper for aggregating campus resources.",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianRawley/numa-wrapper.git"
+  },
+  "keywords": [
+    "uafs",
+    "numa",
+    "api",
+    "wrapper"
+  ],
+  "author": "Christian Rawley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ChristianRawley/numa-wrapper/issues"
+  },
+  "homepage": "https://github.com/ChristianRawley/numa-wrapper#readme"
+}
