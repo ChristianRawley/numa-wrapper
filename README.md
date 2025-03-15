@@ -18,7 +18,7 @@ const uafs = require('numa-wrapper');
     for (n of news) {
         console.log(n.image);
     }
-});
+})();
 
 // Fetch the next 50 upcoming event titles
 (async () => {
@@ -26,7 +26,7 @@ const uafs = require('numa-wrapper');
     for (n of news) {
         console.log(n.title);
     }
-});
+})();
 ```
 
 ## API
