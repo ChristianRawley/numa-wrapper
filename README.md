@@ -62,4 +62,4 @@ Fetches a list of months and their events per day.
 Fetches a list of dining locations and dining hall meals.
 
 **Returns**: 
-- An array of location objects, each containing details of a location (e.g., name, statusMessage, building, meals).
+- An array of location objects, each containing details of a location (e.g., name, statusMessage, building, meals). 
