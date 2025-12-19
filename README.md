@@ -41,7 +41,25 @@ Fetches a list of news for a given page. Defaults to page 1.
 - An array of news objects, where each object contains information about a news item (e.g., title, image, description, title).
 
 ### `getEvents()`
-Fetches a list of the next 50 upcoming events.
+Fetches a list of events.
 
 **Returns**: 
 - An array of events objects, each containing details of an event (e.g., name, date, description).
+
+### `getOrganizations()`
+Fetches a list of organizations.
+
+**Returns**: 
+- An array of organization objects, each containing details of an organization (e.g., name, description, member count, categories, image).
+
+### `getCalendar()`
+Fetches a list of months and their events per day.
+
+**Returns**: 
+- An array of month objects, each containing details of a month's events (e.g., day, description).
+
+### `getDining()`
+Fetches a list of dining locations and dining hall meals.
+
+**Returns**: 
+- An array of location objects, each containing details of a location (e.g., name, statusMessage, building, meals).
