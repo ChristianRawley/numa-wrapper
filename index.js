@@ -1,21 +1,36 @@
 async function api(arg) {
     const response = await fetch(`https://api.cerawley.com/${arg}`);
-    if (!response.ok) {
-        throw new Error(`HTTP error occured. Status: ${response.status}`);
-    }
-    let json = await response.text();
-    return JSON.parse(json);
+    if (!response.ok) throw new Error(`HTTP error occurred. Status: ${response.status}`);
+    const text = await response.text();
+    return JSON.parse(text);
 }
 
-async function getNews({page = 1} = {}) {
-    if (typeof page !== 'number' || isNaN(page)) {
-        throw new Error('Page must be a valid number.');
-    }
-    return await api(`getNews/${page.toString()}`);
+async function getNews({ page = 1 } = {}) {
+    if (typeof page !== 'number' || isNaN(page)) throw new Error('Page must be a valid number.');
+    const data = await api(`news?page=${page.toString()}`);
+    return data.news;
 }
 
 async function getEvents() {
-    return await api(`getEvents`);
+    return await api('events');
 }
 
-module.exports = {getNews, getEvents};
+async function getOrganizations() {
+    return await api('organizations');
+}
+
+async function getCalendar() {
+    return await api('calendar');
+}
+
+async function getDining() {
+    return await api('dining');
+}
+
+module.exports = {
+    getNews,
+    getEvents,
+    getOrganizations,
+    getCalendar,
+    getDining
+};

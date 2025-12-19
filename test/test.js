@@ -2,11 +2,21 @@ const uafs = require('../index.js');
 
 (async () => {
     try {
-        const news = await uafs.getNews({ page: 1 });
-        if (news.length > 0) console.log('getNews() returned a nonempty array.');
+        const calendar = await uafs.getCalendar();
+        console.log(calendar[0].events[0].description);
+
+        const news = await uafs.getNews({ page: 16 });
+        console.log(news[0].title);
+
         const events = await uafs.getEvents();
-        if (events.length > 0) console.log('getEvents() returned a nonempty array.');
-    } catch (error) {
-        console.error('Not all test cases were passed. Error:', error);
+        console.log(events[0].eventName);
+
+        const organizations = await uafs.getOrganizations();
+        console.log(organizations[0].name);
+
+        const dine = await uafs.getDining();
+        console.log(dine.locations[0].statusMessage);
+    } catch (err) {
+        console.error('Test failed:', err);
     }
 })();
