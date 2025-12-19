@@ -1,6 +1,6 @@
 {
   "name": "numa-wrapper",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "A simple API wrapper for aggregating campus resources.",
   "main": "index.js",
   "scripts": {
